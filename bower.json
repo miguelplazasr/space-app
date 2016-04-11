@@ -1,0 +1,21 @@
+{
+  "name": "grunt-angular",
+  "description": "grunt angularjs project",
+  "main": "index.js",
+  "authors": [
+    "miguelplazasr"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "gruntJs"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib",
+    "test",
+    "tests"
+  ]
+}

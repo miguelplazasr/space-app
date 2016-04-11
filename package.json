@@ -1,0 +1,31 @@
+{
+  "name": "grunt-angular",
+  "version": "1.0.0",
+  "description": "grunt angularjs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelplazasr/grunt-angular.git"
+  },
+  "keywords": [
+    "gruntJs"
+  ],
+  "author": "miguelplazasr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguelplazasr/grunt-angular/issues"
+  },
+  "homepage": "https://github.com/miguelplazasr/grunt-angular#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower-task": "^0.4.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ng-annotate": "^2.0.1"
+  }
+}

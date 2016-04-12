@@ -29,6 +29,7 @@
     "bootstrap": "^3.3.6",
     "angular-cookies": "^1.5.3",
     "angular-ui-router": "^0.2.18",
-    "font-awesome": "^4.6.0"
+    "font-awesome": "^4.6.0",
+    "rdash-ui": "^1.0.1"
   }
 }

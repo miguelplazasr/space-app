@@ -22,13 +22,30 @@ module.exports = function(grunt){
 				}
 			}
 		},
+	    //uglify
+		
+		
+	    uglify: {
+	      js: {
+	        files: [{
+	          cwd: 'app/js/',
+	          expand: true,
+	          src: '*.js',
+	          dest: 'js/min/'
+	        }]
+	      }
+	    },
+		
+		/*
 		uglify: {
 			my_target: {
 				files: {
-					'js/scripts.min.js': ['app/js/app.js', 'app/js/services.js', 'app/js/controllers/*.js']
+					'js/scripts.min.js': ['app/js/app.js']
 				}
 			}
 		},
+		*/
+		
 		watch: {
 			scripts: {
 				files: ['app/js/**/*.js'],
@@ -83,6 +100,6 @@ grunt.loadNpmTasks('grunt-browser-sync');
 grunt.loadNpmTasks('grunt-ng-annotate');
 
 // defaultTasks
-grunt.registerTask('default', ["browserSync", "watch", "uglify"]);
+grunt.registerTask('default', ["browserSync", "watch"]);
 
 };

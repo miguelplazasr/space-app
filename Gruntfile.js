@@ -12,10 +12,11 @@ module.exports = function(grunt){
 		    app: {
 		        files: {
 		            //'./public/min-safe/js/appFactory.js': ['./public/js/appFactory.js'],
+					//'./public/min-safe/services.js': ['./app/js/services.js'],
 		            './public/min-safe/js/directives.js': ['./app/js/directives/widget.js'],
 		            './public/min-safe/js/widget-body.js': ['./app/js/directives/widget-body.js'],
-		            './public/min-safe/js/controllers.js': ['./app/js/controllers/masterController.js'],
-		            './public/min-safe/js/testController.js': ['./app/js/controllers/testController.js'],
+		            './public/min-safe/js/controllers.js': ['./app/js/controllers/masterController.js', './app/js/controllers/categoriesController.js'],
+		            //'./public/min-safe/js/categoriesController.js': ['./app/js/controllers/categoriesController.js'],
 		            './public/min-safe/app.js': ['./app/js/app.js']
 		        }
 		    }

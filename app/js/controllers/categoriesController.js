@@ -18,20 +18,6 @@ app.controller('CategoryCtrl', [
             .success(function (data) {
                 $scope.categories = data.categories;
 
-                angular.forEach(data.categories, function(rs) {
-                    console.log(rs.id);
-
-                    $http.get(url + '/' + rs.id, {
-                        params: {
-                            status: 'closed'
-                        }
-                    })
-                        .success(function(res){
-                            console.log(res);
-                        })
-
-                })
-
             })
             .error(function (err) {
 

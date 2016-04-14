@@ -1,28 +1,17 @@
 <div>{{ title }}</div>
 
 <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-3 col-md-6 col-xs-12" ng-repeat="category in categories">
         <rd-widget>
-            <rd-widget-header icon="fa-users" title="Users">
-            <rd-widget-body classes="medium no-padding">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                        <tr><th class="text-center">ID</th><th>Title</th><th>Description</th><th>Events Active</th></tr>
-                        </thead>
-                        <tbody>
-                        <tr ng-repeat="category in categories">
-                            <td class="text-center">{{ category.id }}</td>
-                            <td>{{ category.title }}</td>
-                            <td>{{ category.description }}</td>
-                            <td>
-                                <get-events category="category.id"></get-events>
-
-                            </td>
-                        </tr> </tbody>
-                    </table>
+            <rd-widget-body>
+                <div class="widget-icon green pull-left">
+                    <i class="fa fa-users"></i>
                 </div>
+                <div class="title"><get-events category="category.id"></get-events></div>
+                <div class="comment"><a href="#" uib-popover="{{ category.description }}" popover-trigger="mouseenter" popover-placement="right"> {{ category.title }} </a></div>
             </rd-widget-body>
-            <rd-widget>
+        </rd-widget>
     </div>
 </div>
+
+<div class="fire">fire</div>

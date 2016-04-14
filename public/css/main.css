@@ -1,0 +1,9 @@
+.icon, .fire {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333; }
+
+.fire {
+  background-image: url("../images/noun_370301_cc.png"); }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,19 @@
+// Modules and Variables
+//@import "partials/base";
+
+// Partials
+//@import "partials/icons";
+
+// Vendors
+
+.icon {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.fire {
+  @extend .icon;
+  background-image: url("../images/noun_370301_cc.png");
+
+}

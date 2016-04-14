@@ -1,9 +1,9 @@
 module.exports = function(grunt){
-	
+
 	grunt.initConfig({
-		
+
 		pkg: grunt.file.readJSON('package.json'),
-		
+
 		ngAnnotate: {
 		    options: {
 		        singleQuotes: true,
@@ -21,14 +21,14 @@ module.exports = function(grunt){
 		        }
 		    }
 		},
-		
+
 		concat: {
 		    js: { //target
 		        src: ['./public/min-safe/app.js', './public/min-safe/js/*.js'],
 		        dest: './public/min/app.js'
 		    }
 		},
-		
+
 		/*
 		ngAnnotate: {
 		    dist: {
@@ -41,7 +41,7 @@ module.exports = function(grunt){
 		    }
 		},
 		*/
-		
+
 		bower: {
 			install: {
 				options: {
@@ -54,15 +54,15 @@ module.exports = function(grunt){
 			}
 		},
 	    //uglify
-		
-		
+
+
 		uglify: {
 		    js: { //target
 		        src: ['./public/min/app.js'],
 		        dest: './public/min/app.js'
 		    }
 		},
-	    
+
 		/*
 		uglify: {
 			my_target: {
@@ -72,7 +72,17 @@ module.exports = function(grunt){
 			}
 		},
 		*/
-		
+
+		sass: {
+            dist: {
+                files: {
+                    './public/css/main.css': './app/sass/main.scss'
+
+                }
+            }
+        },
+
+
 		watch: {
 			ngAnnotate: {
 				files: './app/js/**/*.js',
@@ -88,18 +98,24 @@ module.exports = function(grunt){
 				options: {
 					spawn: false,
 				}
+			},
+			css: {
+				files: './app/sass/**/*.scss',
+				tasks: ['sass']
 			}
 		},
-		
+
 		compass: {
 			dist: {
 				options: {
-					config: 'config.rb',
+					sassDir: './app/sass',
+					cssDir: './public/css',
+					//config: 'config.rb',
 					sourcemap: true
 				}
 			}
 		},
-		
+
 		browserSync: {
 			dev: {
 				bsFiles: {
@@ -125,19 +141,20 @@ module.exports = function(grunt){
 				}
 			}
 		}
-		
+
 	});
 
 // loadNpmTasks
-grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-ng-annotate');
-grunt.loadNpmTasks('grunt-bower-task');
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-compass');
-grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-ng-annotate');
+    grunt.loadNpmTasks('grunt-bower-task');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    //grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
 // defaultTasks
-grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "browserSync", "watch"]);
+    grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "browserSync", "watch"]);
 
 };

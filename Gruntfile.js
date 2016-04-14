@@ -6,12 +6,16 @@ module.exports = function(grunt){
 		
 		ngAnnotate: {
 		    options: {
-		        singleQuotes: true
+		        singleQuotes: true,
+				//regexp: '^(ng\n?[\\ ]+(.*)|(module.*))$'
 		    },
 		    app: {
 		        files: {
 		            //'./public/min-safe/js/appFactory.js': ['./public/js/appFactory.js'],
-		            './public/min-safe/js/masterController.js': ['./app/js/controllers/masterController.js'],
+		            './public/min-safe/js/directives.js': ['./app/js/directives/widget.js'],
+		            './public/min-safe/js/widget-body.js': ['./app/js/directives/widget-body.js'],
+		            './public/min-safe/js/controllers.js': ['./app/js/controllers/masterController.js'],
+		            './public/min-safe/js/testController.js': ['./app/js/controllers/testController.js'],
 		            './public/min-safe/app.js': ['./app/js/app.js']
 		        }
 		    }
@@ -58,7 +62,6 @@ module.exports = function(grunt){
 		    }
 		},
 	    
-		
 		/*
 		uglify: {
 			my_target: {
@@ -70,8 +73,16 @@ module.exports = function(grunt){
 		*/
 		
 		watch: {
+			ngAnnotate: {
+				files: './app/js/**/*.js',
+				tasks: "ngAnnotate"
+			},
+		    concat: {
+		      files: ['./public/min-safe/app.js', './public/min-safe/js/*.js'],
+		      tasks: "concat"
+		    },
 			scripts: {
-				files: ['./app/js/**/*.js'],
+				files: ['Gruntfile.js', './app/js/**/*.js'],
 				tasks: ['uglify'],
 				options: {
 					spawn: false,
@@ -92,8 +103,8 @@ module.exports = function(grunt){
 			dev: {
 				bsFiles: {
 					src: [
-						'app/js/**/*.js',
-						'tpl/**/*.html',
+						'./app/js/**/*.js',
+						'./public/tpl/**/*.html',
 						'*.html'
 					]
 				},

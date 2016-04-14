@@ -1,7 +1,7 @@
 /**
  * Created by TextMate.
  * User: miguelplazas
- * Date: 11/04/16
+ * Date: 11/04/16 
  * Time: 22:37
  */
 
@@ -14,3 +14,32 @@ var app = angular.module('app',
 		'ngCookies',
         'ngResource',
     ]);
+	
+/**
+ * Route configuration for the RDash module.
+ */
+app.config(['$stateProvider', '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
+
+        // For unmatched routes
+        $urlRouterProvider.otherwise('/');
+
+        // Application routes
+        $stateProvider
+            .state('index', {
+                url: '/',
+                templateUrl: './public/tpl/dashboard.html'
+            })
+            .state('tables', {
+                url: '/tables',
+                templateUrl: './public/tpl/tables.html'
+            })
+
+            .state('test', {
+                url: '/test',
+                templateUrl: './public/tpl/test.html',
+				controller: 'TestCtrl'
+            })
+			;
+    }
+]);

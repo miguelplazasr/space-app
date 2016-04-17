@@ -11,7 +11,6 @@
   "scripts": {
 	  "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-	"postinstall": "./heroku/bower/bin/bower install && ./heroku/grunt/bin/grunt build",
   "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
   "heroku-postbuild": "echo This runs afterwards."
   },

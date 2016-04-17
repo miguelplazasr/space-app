@@ -1,5 +1,5 @@
 {
-  "name": "grunt-angular",
+  "name": "space-app",
   "version": "1.0.0",
   "description": "grunt angularjs project",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miguelplazasr/grunt-angular.git"
+    "url": "git+https://github.com/miguelplazasr/space-app.git"
   },
   "keywords": [
     "gruntJs"
@@ -16,9 +16,9 @@
   "author": "miguelplazasr",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/miguelplazasr/grunt-angular/issues"
+    "url": "https://github.com/miguelplazasr/space-app/issues"
   },
-  "homepage": "https://github.com/miguelplazasr/grunt-angular#readme",
+  "homepage": "https://github.com/miguelplazasr/space-app#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-bower-task": "^0.4.0",

@@ -1,4 +1,5 @@
 {
+	"cacheDirectories": ["node_modules", "bower_components", "public/build" ],
   "name": "space-app",
   "version": "1.0.0",
   "description": "grunt angularjs project",

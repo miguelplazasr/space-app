@@ -33,6 +33,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "postinstall": "node_modules/.bin/bower install;node_modules/.bin/grunt server:dist"
+    "postinstall": "node_modules/bower/bin/bower install;node_modules/grunt/bin/grunt server:dist"
   }
 }

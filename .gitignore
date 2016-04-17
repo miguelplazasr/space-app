@@ -2,3 +2,5 @@
 /app/lib
 .npm-debug.log
 tmp
+
+.sass-cache

@@ -1,9 +1,9 @@
 module.exports = function(grunt){
-	
+
 	grunt.initConfig({
-		
+
 		pkg: grunt.file.readJSON('package.json'),
-		
+
 		ngAnnotate: {
 		    options: {
 		        singleQuotes: true,
@@ -12,22 +12,23 @@ module.exports = function(grunt){
 		    app: {
 		        files: {
 		            //'./public/min-safe/js/appFactory.js': ['./public/js/appFactory.js'],
-		            './public/min-safe/js/directives.js': ['./app/js/directives/widget.js'],
-		            './public/min-safe/js/widget-body.js': ['./app/js/directives/widget-body.js'],
-		            './public/min-safe/js/controllers.js': ['./app/js/controllers/masterController.js'],
-		            './public/min-safe/js/testController.js': ['./app/js/controllers/testController.js'],
+					//'./public/min-safe/services.js': ['./app/js/services.js'],
+		            './public/min-safe/js/directives.js': ['./app/js/directives/widget.js', './app/js/directives/widget-body.js'],
+		            //'./public/min-safe/js/widget-body.js': ['./app/js/directives/widget-body.js'],
+		            './public/min-safe/js/controllers.js': ['./app/js/controllers/masterController.js', './app/js/controllers/categoriesController.js'],
+		            //'./public/min-safe/js/categoriesController.js': ['./app/js/controllers/categoriesController.js'],
 		            './public/min-safe/app.js': ['./app/js/app.js']
 		        }
 		    }
 		},
-		
+
 		concat: {
 		    js: { //target
 		        src: ['./public/min-safe/app.js', './public/min-safe/js/*.js'],
 		        dest: './public/min/app.js'
 		    }
 		},
-		
+
 		/*
 		ngAnnotate: {
 		    dist: {
@@ -40,7 +41,7 @@ module.exports = function(grunt){
 		    }
 		},
 		*/
-		
+
 		bower: {
 			install: {
 				options: {
@@ -53,15 +54,15 @@ module.exports = function(grunt){
 			}
 		},
 	    //uglify
-		
-		
+
+
 		uglify: {
 		    js: { //target
 		        src: ['./public/min/app.js'],
 		        dest: './public/min/app.js'
 		    }
 		},
-	    
+
 		/*
 		uglify: {
 			my_target: {
@@ -71,7 +72,17 @@ module.exports = function(grunt){
 			}
 		},
 		*/
-		
+
+		sass: {
+            dist: {
+                files: {
+                    './public/css/main.css': './app/sass/main.scss'
+
+                }
+            }
+        },
+
+
 		watch: {
 			ngAnnotate: {
 				files: './app/js/**/*.js',
@@ -87,23 +98,30 @@ module.exports = function(grunt){
 				options: {
 					spawn: false,
 				}
+			},
+			css: {
+				files: './app/sass/*.scss',
+				tasks: ['compass']
 			}
 		},
-		
+
 		compass: {
 			dist: {
 				options: {
+					//sassDir: './app/sass',
+					//cssDir: './public/css',
 					config: 'config.rb',
 					sourcemap: true
 				}
 			}
 		},
-		
+
 		browserSync: {
 			dev: {
 				bsFiles: {
 					src: [
 						'./app/js/**/*.js',
+						'./app/sass/**/*.scss',
 						'./public/tpl/**/*.html',
 						'*.html'
 					]
@@ -124,19 +142,20 @@ module.exports = function(grunt){
 				}
 			}
 		}
-		
+
 	});
 
 // loadNpmTasks
-grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-ng-annotate');
-grunt.loadNpmTasks('grunt-bower-task');
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-compass');
-grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-ng-annotate');
+    grunt.loadNpmTasks('grunt-bower-task');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-compass');
+    //grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
 // defaultTasks
-grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "browserSync", "watch"]);
+    grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "browserSync", "watch"]);
 
 };

@@ -1,7 +1,29 @@
-fire{
 
-}
+.drought-icon { background: image-url($drought-img) no-repeat top left; }
+.dust-haze-icon { background: image-url($dust-haze-img) no-repeat top left; }
+.earthquakes-icon { background: image-url($earthquakes-img) no-repeat top left; }
+.floods-icon { background: image-url($floods-img) no-repeat top left; }
+.landslides-icon { background: image-url($landslides-img) no-repeat top left; }
+.manmade-icon { background: image-url($manmade-img) no-repeat top left; }
+.sea-lakes-ice-icon { background: image-url($sea-lakes-ice-img) no-repeat top left; }
+.severe-storms-icon { background: image-url($severe-storms-img) no-repeat top left; }
+.snow-icon { background: image-url($snow-img) no-repeat top left; }
+.temperature-extremes-icon { background: image-url($temperature-extremes-img) no-repeat top left; }
+.volcanoes-icon { background: image-url($volcanoes-img) no-repeat top left; }
+.water-color-icon { background: image-url($water-color-img) no-repeat top left; }
+.wildfires-icon { background: image-url($wildfires-img) no-repeat top left; }
 
-drog {
 
-}
+.drought-color { background: $drought-color !important; }
+.dust-haze-color { background: $dust-haze-color !important;; }
+.earthquakes-color { background: $earthquakes-color !important;; }
+.floods-color { background: $floods-color !important;; }
+.landslides-color { background: $landslides-color !important;; }
+.manmade-color { background: $manmade-color !important;; }
+.sea-lakes-ice-color { background: $sea-lakes-ice-color !important;; }
+.severe-storms-color { background: $severe-storms-color !important;; }
+.snow-color { background: $snow-color !important;; }
+.temperature-extremes-color { background: $temperature-extremes-color !important;; }
+.volcanoes-color { background: $volcanoes-color !important;; }
+.water-color-color { background: $water-color-color !important;; }
+.wildfires-color { background: $wildfires-color !important;; }

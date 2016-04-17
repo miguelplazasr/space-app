@@ -23,7 +23,7 @@ app.directive('getEvents', ['$http', function($http) {
                     status: 'open'
                 }
             }).success(function(data){
-                $scope.resultado = data.events.length;
+                  $scope.resultado = data.events.length;
             });
         },
         template: '<div>{{resultado}}</div>',

@@ -13,8 +13,8 @@ module.exports = function(grunt){
 		        files: {
 		            //'./public/min-safe/js/appFactory.js': ['./public/js/appFactory.js'],
 					//'./public/min-safe/services.js': ['./app/js/services.js'],
-		            './public/min-safe/js/directives.js': ['./app/js/directives/widget.js'],
-		            './public/min-safe/js/widget-body.js': ['./app/js/directives/widget-body.js'],
+		            './public/min-safe/js/directives.js': ['./app/js/directives/widget.js', './app/js/directives/widget-body.js'],
+		            //'./public/min-safe/js/widget-body.js': ['./app/js/directives/widget-body.js'],
 		            './public/min-safe/js/controllers.js': ['./app/js/controllers/masterController.js', './app/js/controllers/categoriesController.js'],
 		            //'./public/min-safe/js/categoriesController.js': ['./app/js/controllers/categoriesController.js'],
 		            './public/min-safe/app.js': ['./app/js/app.js']
@@ -100,17 +100,17 @@ module.exports = function(grunt){
 				}
 			},
 			css: {
-				files: './app/sass/**/*.scss',
-				tasks: ['sass']
+				files: './app/sass/*.scss',
+				tasks: ['compass']
 			}
 		},
 
 		compass: {
 			dist: {
 				options: {
-					sassDir: './app/sass',
-					cssDir: './public/css',
-					//config: 'config.rb',
+					//sassDir: './app/sass',
+					//cssDir: './public/css',
+					config: 'config.rb',
 					sourcemap: true
 				}
 			}
@@ -121,6 +121,7 @@ module.exports = function(grunt){
 				bsFiles: {
 					src: [
 						'./app/js/**/*.js',
+						'./app/sass/**/*.scss',
 						'./public/tpl/**/*.html',
 						'*.html'
 					]
@@ -150,8 +151,8 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    //grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-compass');
+    //grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-browser-sync');
 
 // defaultTasks

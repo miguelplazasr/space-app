@@ -3,15 +3,32 @@
 <div class="row">
     <div class="col-lg-3 col-md-6 col-xs-12" ng-repeat="category in categories">
         <rd-widget>
+
+            <rd-widget-header icon="fa-tasks" title="Striped Servers">
+            </rd-widget-header>
+
             <rd-widget-body>
-                <div class="widget-icon green pull-left">
-                    <i class="fa fa-users"></i>
+                <!--
+                <div category="category.name" class="widget-icon red pull-left">
+                    <i class="icon {{category.name}}-icon"></i>
                 </div>
-                <div class="title"><get-events category="category.id"></get-events></div>
-                <div class="comment"><a href="#" uib-popover="{{ category.description }}" popover-trigger="mouseenter" popover-placement="right"> {{ category.title }} </a></div>
+                -->
+                <mp-icon category="category.title"></mp-icon>
+                <div class="title">
+                    <get-events category="category.id"></get-events>
+                </div>
+                <div class="comment">
+                    <h4>{{ category.title }}</h4>
+                    {{ category.description }}
+                </div>
             </rd-widget-body>
+
+            <rd-widget-footer>
+                <button class="btn btn-default btn-circle btn-lg pull-right">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+                <div class="clearfix"></div>
+            </rd-widget-footer>
         </rd-widget>
     </div>
 </div>
-
-<div class="fire">fire</div>

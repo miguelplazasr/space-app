@@ -1,19 +1,70 @@
 // Modules and Variables
-//@import "partials/base";
+@import "partials/base";
 
 // Partials
-//@import "partials/icons";
+@import "partials/variables";
+@import "partials/icons";
 
 // Vendors
-
 .icon {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  //background-position: 0 0;
+  position: relative;
+  top: calc(50% - 15px);
+  width: 32px; height: 32px;
 }
 
-.fire {
-  @extend .icon;
-  background-image: url("../images/noun_370301_cc.png");
-
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
 }
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+
+.drought{}
+
+.dust-haze{}
+
+.earthquakes{}
+
+.floods{}
+
+.landslides{}
+
+.manmade{}
+
+.sea-lakes-ice{}
+
+.severe-storms{}
+
+.snow{}
+
+.temperature-extremes{}
+
+.volcanoes{}
+
+.water-color{}
+
+.wildfires{}

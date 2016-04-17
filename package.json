@@ -25,8 +25,14 @@
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-ng-annotate": "^2.0.1"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "postinstall": "node_modules/.bin/bower install;node_modules/.bin/grunt server:dist"
+  },
 }

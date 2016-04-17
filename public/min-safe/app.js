@@ -34,11 +34,10 @@ app.config(['$stateProvider', '$urlRouterProvider',
                 url: '/tables',
                 templateUrl: './public/tpl/tables.html'
             })
-
-            .state('test', {
-                url: '/test',
-                templateUrl: './public/tpl/test.html',
-				controller: 'TestCtrl'
+            .state('categories', {
+                url: '/categories',
+                templateUrl: './public/tpl/categories.html',
+				controller: 'CategoryCtrl'
             })
 			;
     }

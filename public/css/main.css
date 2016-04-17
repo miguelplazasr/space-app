@@ -1,0 +1,173 @@
+/* line 2, ../../app/sass/partials/_icons.scss */
+.drought-icon {
+  background: url('/./public/images/drought.svg?1460735840') no-repeat top left;
+}
+
+/* line 3, ../../app/sass/partials/_icons.scss */
+.dust-haze-icon {
+  background: url('/./public/images/dust-haze.svg?1460765098') no-repeat top left;
+}
+
+/* line 4, ../../app/sass/partials/_icons.scss */
+.earthquakes-icon {
+  background: url('/./public/images/earthquakes.svg?1460778410') no-repeat top left;
+}
+
+/* line 5, ../../app/sass/partials/_icons.scss */
+.floods-icon {
+  background: url('/./public/images/floods.svg?1460765625') no-repeat top left;
+}
+
+/* line 6, ../../app/sass/partials/_icons.scss */
+.landslides-icon {
+  background: url('/./public/images/landslides.svg?1460765680') no-repeat top left;
+}
+
+/* line 7, ../../app/sass/partials/_icons.scss */
+.manmade-icon {
+  background: url('/./public/images/manmade.svg?1460765947') no-repeat top left;
+}
+
+/* line 8, ../../app/sass/partials/_icons.scss */
+.sea-lakes-ice-icon {
+  background: url('/./public/images/sea-lakes-ice.svg?1460766490') no-repeat top left;
+}
+
+/* line 9, ../../app/sass/partials/_icons.scss */
+.severe-storms-icon {
+  background: url('/./public/images/severe-storms.svg?1460766850') no-repeat top left;
+}
+
+/* line 10, ../../app/sass/partials/_icons.scss */
+.snow-icon {
+  background: url('/./public/images/snow.svg?1460767036') no-repeat top left;
+}
+
+/* line 11, ../../app/sass/partials/_icons.scss */
+.temperature-extremes-icon {
+  background: url('/./public/images/temperature-extremes.svg?1460767401') no-repeat top left;
+}
+
+/* line 12, ../../app/sass/partials/_icons.scss */
+.volcanoes-icon {
+  background: url('/./public/images/volcanoes.svg?1460767582') no-repeat top left;
+}
+
+/* line 13, ../../app/sass/partials/_icons.scss */
+.water-color-icon {
+  background: url('/./public/images/water-color.svg?1460767832') no-repeat top left;
+}
+
+/* line 14, ../../app/sass/partials/_icons.scss */
+.wildfires-icon {
+  background: url('/./public/images/wildfires.svg?1460768699') no-repeat top left;
+}
+
+/* line 17, ../../app/sass/partials/_icons.scss */
+.drought-color {
+  background: #c3a675 !important;
+}
+
+/* line 18, ../../app/sass/partials/_icons.scss */
+.dust-haze-color {
+  background: #666563 !important;
+}
+
+/* line 19, ../../app/sass/partials/_icons.scss */
+.earthquakes-color {
+  background: #93c945 !important;
+}
+
+/* line 20, ../../app/sass/partials/_icons.scss */
+.floods-color {
+  background: #2699da !important;
+}
+
+/* line 21, ../../app/sass/partials/_icons.scss */
+.landslides-color {
+  background: #9b631a !important;
+}
+
+/* line 22, ../../app/sass/partials/_icons.scss */
+.manmade-color {
+  background: #6f9b1a !important;
+}
+
+/* line 23, ../../app/sass/partials/_icons.scss */
+.sea-lakes-ice-color {
+  background: #afd9ee !important;
+}
+
+/* line 24, ../../app/sass/partials/_icons.scss */
+.severe-storms-color {
+  background: #192a9b !important;
+}
+
+/* line 25, ../../app/sass/partials/_icons.scss */
+.snow-color {
+  background: #a4a3a7 !important;
+}
+
+/* line 26, ../../app/sass/partials/_icons.scss */
+.temperature-extremes-color {
+  background: #ff151a !important;
+}
+
+/* line 27, ../../app/sass/partials/_icons.scss */
+.volcanoes-color {
+  background: #ff6500 !important;
+}
+
+/* line 28, ../../app/sass/partials/_icons.scss */
+.water-color-color {
+  background: #37759b !important;
+}
+
+/* line 29, ../../app/sass/partials/_icons.scss */
+.wildfires-color {
+  background: #f3be08 !important;
+}
+
+/* line 9, ../../app/sass/main.scss */
+.icon {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  top: calc(50% - 15px);
+  width: 32px;
+  height: 32px;
+}
+
+/* line 19, ../../app/sass/main.scss */
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+/* line 28, ../../app/sass/main.scss */
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+/* line 36, ../../app/sass/main.scss */
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -50,7 +50,9 @@ module.exports = function(grunt){
 					install: true,
 					verbose: true,
 					cleanBowerDir: true,
-					ignorePackages: ['jquery']
+					bowerOptions : {
+						ignorePackages: ['jquery']
+					}
 				}
 			}
 		},

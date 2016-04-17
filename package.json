@@ -29,10 +29,5 @@
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-ng-annotate": "^2.0.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "postinstall": "./node_modules/bower/bin/bower install;./node_modules/grunt/bin/grunt server:dist"
   }
 }

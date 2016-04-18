@@ -156,7 +156,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-browser-sync');
 
 // defaultTasks
-    grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "browserSync", "watch"]);
-    //grunt.registerTask('default', ["ngAnnotate", "concat", "uglify"]);
+    //grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "browserSync", "watch"]);
+    grunt.registerTask('default', ["ngAnnotate", "concat", "uglify"]);
 
 };

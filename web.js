@@ -5,7 +5,7 @@ var express = require("express"),
 process.env.PWD = process.cwd();
  
 app.configure(function(){
-    app.use(express.static(process.env.PWD + '/dev'));
+    app.use(express.static(process.env.PWD + './'));
     app.use(express.bodyParser());
     app.use(express.methodOverride());
  

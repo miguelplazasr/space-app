@@ -150,12 +150,13 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-bower-task');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    //grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     //grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-browser-sync');
+    //grunt.loadNpmTasks('grunt-browser-sync');
 
 // defaultTasks
-    grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "browserSync", "watch"]);
+    //grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "browserSync", "watch"]);
+    grunt.registerTask('default', ["ngAnnotate", "concat", "uglify"]);
 
 };

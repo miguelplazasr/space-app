@@ -28,15 +28,15 @@ app.config(['$stateProvider', '$urlRouterProvider',
         $stateProvider
             .state('index', {
                 url: '/',
-                templateUrl: './views/dashboard.html'
+                templateUrl: './dashboard'
             })
             .state('tables', {
                 url: '/tables',
-                templateUrl: './views/tables.html'
+                templateUrl: './tables'
             })
             .state('categories', {
                 url: '/categories',
-                templateUrl: './views/categories.html',
+                templateUrl: './categories',
 				controller: 'CategoryCtrl'
             })
 			;

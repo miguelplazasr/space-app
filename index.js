@@ -14,7 +14,19 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.get('/', function(request, response) {
-  response.render('index.html');
+  response.render('index');
+});
+
+app.get('/tables', function(request, response) {
+  response.render('tables');
+});
+
+app.get('/dashboard', function(request, response) {
+  response.render('dashboard');
+});
+
+app.get('/categories', function(request, response) {
+  response.render('categories');
 });
 
 app.listen(app.get('port'), function() {

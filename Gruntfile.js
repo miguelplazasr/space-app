@@ -1,5 +1,7 @@
 module.exports = function(grunt){
 
+    var path = require('path');
+
 	grunt.initConfig({
 
 		pkg: grunt.file.readJSON('package.json'),
@@ -12,10 +14,21 @@ module.exports = function(grunt){
 		    app: {
 		        files: {
 		            //'./public/min-safe/js/appFactory.js': ['./public/js/appFactory.js'],
-					//'./public/min-safe/services.js': ['./app/js/services.js'],
-		            './public/min-safe/js/directives.js': ['./app/js/directives/widget.js', './app/js/directives/widget-body.js'],
+					'./public/min-safe/services.js': ['./app/js/services.js'],
+		            './public/min-safe/js/directives.js': [
+						'./app/js/directives/widget.js',
+						'./app/js/directives/widget-header.js',
+						'./app/js/directives/widget-body.js',
+						'./app/js/directives/widget-footer.js',
+						'./app/js/directives/get-events.js',
+						'./app/js/directives/loading.js',
+						'./app/js/directives/mp-icon.js',
+					],
 		            //'./public/min-safe/js/widget-body.js': ['./app/js/directives/widget-body.js'],
-		            './public/min-safe/js/controllers.js': ['./app/js/controllers/masterController.js', './app/js/controllers/categoriesController.js'],
+		            './public/min-safe/js/controllers.js': [
+						'./app/js/controllers/masterController.js',
+						'./app/js/controllers/categoriesController.js'
+					],
 		            //'./public/min-safe/js/categoriesController.js': ['./app/js/controllers/categoriesController.js'],
 		            './public/min-safe/app.js': ['./app/js/app.js']
 		        }
@@ -45,11 +58,21 @@ module.exports = function(grunt){
 		bower: {
 			install: {
 				options: {
-					targetDir: './app/lib',
-					layout: 'byComponent',
+					targetDir: './public',
+                    layout: function(type, component, source) {
+                        var renamedType = type;
+                        if (type == 'js') renamedType = 'js/lib';
+                        else if (type == 'js/map') renamedType = 'js/lib';
+                        else if (type == 'js/lang') renamedType = 'js/lib/lang';
+                        else if (type == 'css') renamedType = 'css/lib';
+                        else if (type == 'css/img') renamedType = 'css';
+                        return path.join(renamedType);;
+                    },
 					install: true,
-					verbose: true,
-					cleanBowerDir: true
+					verbose: false,
+                    cleanTargetDir: false,
+                    cleanBowerDir: false,
+                    bowerOptions: {}
 				}
 			}
 		},
@@ -156,7 +179,9 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-browser-sync');
 
 // defaultTasks
-    //grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "browserSync", "watch"]);
-    grunt.registerTask('default', ["ngAnnotate", "concat", "uglify"]);
+    //grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "bower", "browserSync", "watch"]);
+    grunt.registerTask('default', ["ngAnnotate", "concat", "uglify", "bower"]);
+
+    //grunt.registerTask('default', ["ngAnnotate", "concat", "uglify"]);
 
 };

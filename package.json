@@ -42,6 +42,7 @@
   "dependencies": {
       "ejs": "2.3.3",
 	  "express": "4.13.3",
+    "bower": "*",
     "grunt": "^1.0.1",
     "grunt-bower-task": "^0.4.0",
     "grunt-browser-sync": "^2.2.0",

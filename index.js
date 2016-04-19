@@ -14,7 +14,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.get('/', function(request, response) {
-  response.render('./index.html');
+  response.render('index.html');
 });
 
 app.listen(app.get('port'), function() {

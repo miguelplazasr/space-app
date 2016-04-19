@@ -14,7 +14,6 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "app/lib",
     "test",
     "tests"
   ],
@@ -30,5 +29,57 @@
     "angular-ui-router": "^0.2.18",
     "font-awesome": "^4.6.0",
     "rdash-ui": "^1.0.1"
+  },
+  "exportsOverride": {
+    "angular": {
+      "js": "angular.js"
+    },
+    "angular-animate": {
+      "js": "angular-animate*.js",
+      "js/map": "angular-animate*.map"
+
+    },
+    "angular-touch": {
+      "js": "angular-touch*.js",
+      "js/map": "angular-touch*.map"
+    },
+    "angular-bootstrap": {
+      "js": "ui-bootstrap*.js",
+      "css": "ui-bootstrap*.css"
+    },
+    "bootstrap-ui-navbar": {
+      "js": "dist/bootstrap-ui-navmar*.js"
+    },
+    "angular-resource": {
+      "js": "angular-resource*.js",
+      "js/map": "angular-resource*.map"
+    },
+    "angular-route": {
+      "js": "angular-route*.js",
+      "js/map": "angular-route*.map"
+    },
+    "angular-cookies": {
+      "js": "angular-cookies*.js",
+      "js/map": "angular-cookies*.map"
+    },
+    "angular-ui-router": {
+      "js": "release/angular-ui-router*.js"
+    },
+    "font-awesome": {
+      "js": "ui-bootstrap*.js",
+      "css": "css/*",
+      "fonts": "fonts/*"
+    },
+    "rdash-ui": {
+      "css": "dist/css/*",
+      "fonts": "dist/fonts/*"
+    },
+    "bootstrap": {
+      "js": "dist/js/bootstrap*.js",
+      "js/map": "dist/js/bootstrap*.map",
+      "fonts": "dist/fonts/*",
+      "css": "dist/css/*"
+    }
+
   }
 }

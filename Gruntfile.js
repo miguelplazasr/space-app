@@ -65,6 +65,7 @@ module.exports = function(grunt){
                         else if (type == 'js/map') renamedType = 'js/lib';
                         else if (type == 'js/lang') renamedType = 'js/lib/lang';
                         else if (type == 'css') renamedType = 'css/lib';
+                        else if (type == 'fonts') renamedType = 'css/fonts';
                         else if (type == 'css/img') renamedType = 'css';
                         return path.join(renamedType);;
                     },
